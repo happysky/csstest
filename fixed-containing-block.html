@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>margin%测试</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<style>
+	.box1{
+		width:500px;
+		height: 500px;
+		margin: auto;
+		border: #000 solid 1px;
+	}
+
+	.box2{
+		position: fixed;
+		width: 10%;
+		height: 10%;
+		background: #f00;
+	}
+</style>
+</head>
+<body>
+	<div class="box1">
+		<div class="box2">
+
+		</div>
+	</div>
+</body>
+<script src="js/lib/jquery.min.js"></script>
+<script>
+	$(function(){
+		console.log($('.box1').width());
+		console.log($('.box1').height());
+		console.log($('.box1').offset());
+		console.log($('.box2').offset());
+	});
+</script>
+</html>

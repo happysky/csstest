@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>使用top进行垂直居中</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<style>
+	*{
+		margin:0;
+		padding:0;
+	}
+	.box1{
+		position: relative;
+		border:#f00 solid 1px;
+	}
+
+	.box2{
+		position: absolute;
+		left: 0;
+    	top: 0;
+		width:100%;
+		height: 100%;
+		background: rgba(0,0,0,0.7);
+	}
+	.box3 {
+	    position: relative;
+	    text-align: center;
+	    top: 50%;
+	}
+	.box3::after{
+		content: "";
+		height: 100px;
+		background: #f00;
+	}
+	.box3 span{
+	    position: relative;
+	    background-color: #f00;
+	}
+
+	.box5{
+		visibility: hidden;
+	}
+
+	.box4{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: -50%;
+	}
+</style>
+</head>
+<body>
+	<div class="box1">
+		<p>1</p>
+		<p>1</p>
+		<p>1</p>
+		<p>1</p>
+		<p>1</p>
+		<p>1</p>
+		<p>1</p>
+		<p>1</p>
+		<p>1</p>
+		<p>1</p>
+		<p>1</p>
+		<p>1</p>
+		<p>1</p>
+		<p>1</p>
+		<p>1</p>
+		<p>1</p>
+		<div class="box2">
+			<div class="box3">
+				<div class="box5">
+					<p>测试</p>
+					<p>测试</p>
+					<p>测试</p>
+					<p>测试</p>
+					<p>测试</p>
+				</div>
+				
+				<div class="box4">
+					<p>测试</p>
+					<p>测试</p>
+					<p>测试</p>
+					<p>测试</p>
+					<p>测试</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
